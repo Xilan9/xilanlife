@@ -30,99 +30,99 @@ import java.util.Map;
 @Slf4j
 public class SmsService {
 
-	@Autowired
-	private LoginConfig loginConfig;
+    @Autowired
+    private LoginConfig loginConfig;
 
-	@Autowired
-	private RedisTemplate<String,String> redisTemplate;
-
-
-	private static String Url = "http://106.ihuyi.com/webservice/sms.php?method=Submit";
-
-	public String SendSms(String mobile) {
-
-		HttpClient client = new HttpClient(); 
-		PostMethod method = new PostMethod(Url);
-
-		client.getParams().setContentCharset("GBK");
-		method.setRequestHeader("ContentType","application/x-www-form-urlencoded;charset=GBK");
-
-		String mobile_code = RandomUtils.nextInt(100000,999999) + "";
-
-	    String content = new String("您的验证码是：" + mobile_code + "。请不要把验证码泄露给其他人。");
-
-		NameValuePair[] data = {//提交短信
-			    new NameValuePair("account",loginConfig.getAccount()), //查看用户名 登录用户中心->验证码通知短信>产品总览->API接口信息->APIID
-			    new NameValuePair("password",loginConfig.getPassword()), //查看密码 登录用户中心->验证码通知短信>产品总览->API接口信息->APIKEY
-			    //new NameValuePair("password", util.StringUtil.MD5Encode("密码")),
-				new NameValuePair("mobile", mobile),
-			    new NameValuePair("content", content),
-		};
-		method.setRequestBody(data);
-
-		try {
-			client.executeMethod(method);
-			
-			String SubmitResult =method.getResponseBodyAsString();
+    @Autowired
+    private RedisTemplate<String, String> redisTemplate;
 
 
-			Document doc = DocumentHelper.parseText(SubmitResult);
-			Element root = doc.getRootElement();
+    private static String Url = "http://106.ihuyi.com/webservice/sms.php?method=Submit";
 
-			String code = root.elementText("code");
-			String msg = root.elementText("msg");
-			String smsid = root.elementText("smsid");
+    public String SendSms(String mobile) {
+
+        HttpClient client = new HttpClient();
+        PostMethod method = new PostMethod(Url);
+
+        client.getParams().setContentCharset("GBK");
+        method.setRequestHeader("ContentType", "application/x-www-form-urlencoded;charset=GBK");
+
+        String mobile_code = RandomUtils.nextInt(100000, 999999) + "";
+
+        String content = new String("您的验证码是：" + mobile_code + "。请不要把验证码泄露给其他人。");
+
+        NameValuePair[] data = {//提交短信
+                new NameValuePair("account", loginConfig.getAccount()), //查看用户名 登录用户中心->验证码通知短信>产品总览->API接口信息->APIID
+                new NameValuePair("password", loginConfig.getPassword()), //查看密码 登录用户中心->验证码通知短信>产品总览->API接口信息->APIKEY
+                //new NameValuePair("password", util.StringUtil.MD5Encode("密码")),
+                new NameValuePair("mobile", mobile),
+                new NameValuePair("content", content),
+        };
+        method.setRequestBody(data);
+
+        try {
+            client.executeMethod(method);
+
+            String SubmitResult = method.getResponseBodyAsString();
+
+
+            Document doc = DocumentHelper.parseText(SubmitResult);
+            Element root = doc.getRootElement();
+
+            String code = root.elementText("code");
+            String msg = root.elementText("msg");
+            String smsid = root.elementText("smsid");
 
 //			System.out.println(code);
 //			System.out.println(msg);
 //			System.out.println(smsid);
 
-			 if("2".equals(code)){
-				System.out.println("短信提交成功1234556");
-				return mobile_code;
-			}
+            if ("2".equals(code)) {
+                System.out.println("短信提交成功1234556");
+                return mobile_code;
+            }
 
-		} catch (HttpException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (DocumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        } catch (HttpException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-		return null;
-	}
+        return null;
+    }
 
 
+    /**
+     * 发送短信验证码
+     * 实现：发送完成短信验证码时需要把验证码保存到redis中
+     *
+     * @param phone
+     * @return
+     */
+    public ErrorResult sendCheckCode(String phone) {
 
-	/**
-	 * 发送短信验证码
-	 * 实现：发送完成短信验证码时需要把验证码保存到redis中
-	 * @param phone
-	 * @return
-	 */
-	public ErrorResult sendCheckCode(String phone) {
+        //设置key
+        String redisKey = "CHECK_CODE_" + phone;
+        //判断短信验证码是否失效
+        if (this.redisTemplate.hasKey(redisKey)) {
+            String msg = "上一次发送的验证码还未失效!";
+            return ErrorResult.builder().errCode("000001").errMessage(msg).build();
+        }
 
-		//设置key
-		String redisKey="CHECK_CODE_"+phone;
-		//判断短信验证码是否失效
-		if (this.redisTemplate.hasKey(redisKey)){
-			String msg="上一次发送的验证码还未失效!";
-			return ErrorResult.builder().errCode("000001").errMessage(msg).build();
-		}
-
-		//String code = this.SendSms(phone);
-		String code = "123456";
-		if (StringUtils.isEmpty(code)){
-			String msg="发送短信验证码失败";
-			return ErrorResult.builder().errCode("000000").errMessage(msg).build();
-		}
-		//短信保存到redis中有效期为5分钟
-		this.redisTemplate.opsForValue().set(redisKey,code, Duration.ofMinutes(5));
-		return null;
-	}
+        //String code = this.SendSms(phone);
+        String code = "123456";
+        if (StringUtils.isEmpty(code)) {
+            String msg = "发送短信验证码失败";
+            return ErrorResult.builder().errCode("000000").errMessage(msg).build();
+        }
+        //短信保存到redis中有效期为5分钟
+        this.redisTemplate.opsForValue().set(redisKey, code, Duration.ofMinutes(5));
+        return null;
+    }
 
 }

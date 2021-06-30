@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+
 import java.io.IOException;
 import java.util.Map;
 
@@ -26,12 +27,13 @@ public class UserInfoService {
     private FaceEngineService faceEngineService;
     @Autowired
     private PicUploadService picUploadService;
+
     public Boolean saveUserInfo(Map<String, String> param, String token) {
-       User user= this.userService.queryUserByToken(token);
-       if (null==user){
-           return false;
-       }
-        UserInfo userInfo=new UserInfo();
+        User user = this.userService.queryUserByToken(token);
+        if (null == user) {
+            return false;
+        }
+        UserInfo userInfo = new UserInfo();
         userInfo.setUserId(user.getId());
         userInfo.setSex(StringUtils.equalsIgnoreCase(param.get("gender"), "man") ? SexEnum.MAN : SexEnum.WOMAN);
         userInfo.setNickName(param.get("nickname"));
@@ -43,12 +45,12 @@ public class UserInfoService {
 
     public Boolean saveUserLogo(MultipartFile file, String token) {
         User user = this.userService.queryUserByToken(token);
-        if (null == user){
+        if (null == user) {
             return false;
         }
         try {
             boolean b = this.faceEngineService.checkIsPortrait(file.getBytes());
-            if (!b){
+            if (!b) {
                 return false;
             }
 
@@ -56,13 +58,13 @@ public class UserInfoService {
             e.printStackTrace();
         }
         PicUploadResult result = this.picUploadService.upload(file);
-        if (StringUtils.isEmpty(result.getName())){
+        if (StringUtils.isEmpty(result.getName())) {
             return false;
         }
-        UserInfo userInfo=new UserInfo();
+        UserInfo userInfo = new UserInfo();
         userInfo.setLogo(result.getName());
-        QueryWrapper<UserInfo>queryWrapper=new QueryWrapper<>();
-        queryWrapper.eq("user_id",user.getId());
-        return this.userInfoMapper.update(userInfo,queryWrapper) == 1;
+        QueryWrapper<UserInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("user_id", user.getId());
+        return this.userInfoMapper.update(userInfo, queryWrapper) == 1;
     }
 }

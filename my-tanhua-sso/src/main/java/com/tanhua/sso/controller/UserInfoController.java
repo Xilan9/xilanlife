@@ -4,14 +4,11 @@ import com.tanhua.sso.pojo.User;
 import com.tanhua.sso.service.UserInfoService;
 import com.tanhua.sso.service.UserService;
 import com.tanhua.sso.vo.ErrorResult;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -28,10 +25,11 @@ public class UserInfoController {
      * @return
      */
     @PostMapping("loginReginfo")
-    public ResponseEntity<Object>loginReginfo(@RequestBody Map<String,String> param, @RequestHeader("Authorization")String token){
+    public ResponseEntity<Object> loginReginfo(@RequestBody Map<String, String> param, @RequestHeader("Authorization") String token) {
         try {
-            Boolean bool=this.userInfoService.saveUserInfo(param,token);
-            if (bool){
+            Boolean bool = this.userInfoService.saveUserInfo(param, token);
+            //判断是否为false
+            if (bool) {
                 return ResponseEntity.ok(null);
             }
         } catch (Exception e) {
@@ -47,10 +45,10 @@ public class UserInfoController {
      * @return
      */
     @PostMapping("loginReginfo/head")
-    public ResponseEntity<Object>saveUserLogo(@RequestParam("headPhoto")MultipartFile file, @RequestHeader("Authorization")String token){
+    public ResponseEntity<Object> saveUserLogo(@RequestParam("headPhoto") MultipartFile file, @RequestHeader("Authorization") String token) {
         try {
-            Boolean bool=this.userInfoService.saveUserLogo(file,token);
-            if (bool){
+            Boolean bool = this.userInfoService.saveUserLogo(file, token);
+            if (bool) {
                 return ResponseEntity.ok(null);
             }
         } catch (Exception e) {

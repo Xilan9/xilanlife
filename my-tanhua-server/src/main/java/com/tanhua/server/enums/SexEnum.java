@@ -1,4 +1,4 @@
-package com.tanhua.sso.enums;
+package com.tanhua.server.enums;
 
 import com.baomidou.mybatisplus.core.enums.IEnum;
 

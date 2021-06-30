@@ -20,6 +20,6 @@ public class PicUploadController {
     @PostMapping
     @ResponseBody
     public PicUploadResult upload(@RequestParam("file") MultipartFile multipartFile) {
-            return this.picUploadService.upload(multipartFile);
+        return this.picUploadService.upload(multipartFile);
     }
 }

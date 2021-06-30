@@ -7,7 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mytanhuadubbointerface" />
+        <module name="mytanhuaserver" />
         <module name="my-tanhua-sso" />
+        <module name="mytanhuadubboservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +22,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="my-tanhua-sso" options="-parameters" />
       <module name="mytanhua" options="" />
+      <module name="mytanhuadubbo" options="" />
+      <module name="mytanhuadubbointerface" options="-parameters" />
+      <module name="mytanhuadubboservice" options="-parameters" />
+      <module name="mytanhuaserver" options="-parameters" />
     </option>
   </component>
 </project>

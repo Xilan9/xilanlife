@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>my-tanhua-sso</module>
+        <module>my-tanhua-server</module>
+        <module>my-tanhua-dubbo</module>
     </modules>
 
 

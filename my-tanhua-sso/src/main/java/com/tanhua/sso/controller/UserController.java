@@ -23,21 +23,22 @@ public class UserController {
 
     /**
      * 用户登录
+     *
      * @param param
      * @return
      */
     @PostMapping("loginVerification")
-    public ResponseEntity<Object>login(@RequestBody Map<String,String> param){
+    public ResponseEntity<Object> login(@RequestBody Map<String, String> param) {
         try {
-            String phone=param.get("phone");
+            String phone = param.get("phone");
             String code = param.get("verificationCode");
-            String data =this.userService.login(phone,code);
-            if (StringUtils.isNotEmpty(data)){
+            String data = this.userService.login(phone, code);
+            if (StringUtils.isNotEmpty(data)) {
                 //登录成功
-                Map<String,Object> result=new HashMap<>(2);
+                Map<String, Object> result = new HashMap<>(2);
                 String[] ss = StringUtils.split(data, '|');
-                result.put("token",ss[0]);
-                result.put("isNew",Boolean.valueOf(ss[1]));
+                result.put("token", ss[0]);
+                result.put("isNew", Boolean.valueOf(ss[1]));
                 return ResponseEntity.ok(result);
             }
         } catch (Exception e) {
