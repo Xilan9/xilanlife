@@ -15,6 +15,7 @@
         <module>my-tanhua-sso</module>
         <module>my-tanhua-server</module>
         <module>my-tanhua-dubbo</module>
+        <module>my-tanhua-common</module>
     </modules>
 
 
@@ -156,6 +157,11 @@
                 <groupId>com.arcsoft.face</groupId>
                 <artifactId>arcsoft-sdk-face</artifactId>
                 <version>3.0.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.5.2</version>
             </dependency>
             <dependency>
                 <groupId>com.github.tobato</groupId>

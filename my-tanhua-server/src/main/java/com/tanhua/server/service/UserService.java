@@ -2,7 +2,7 @@ package com.tanhua.server.service;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tanhua.server.pojo.User;
+import com.tanhua.common.pojo.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

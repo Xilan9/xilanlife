@@ -10,6 +10,7 @@
         <module name="mytanhuadubbointerface" />
         <module name="mytanhuaserver" />
         <module name="my-tanhua-sso" />
+        <module name="mytanhuacommon" />
         <module name="mytanhuadubboservice" />
       </profile>
     </annotationProcessing>
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="my-tanhua-sso" options="-parameters" />
       <module name="mytanhua" options="" />
+      <module name="mytanhuacommon" options="-parameters" />
       <module name="mytanhuadubbo" options="" />
       <module name="mytanhuadubbointerface" options="-parameters" />
       <module name="mytanhuadubboservice" options="-parameters" />

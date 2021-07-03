@@ -1,8 +1,7 @@
 package com.tanhua.server.interceptor;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tanhua.server.utils.Cache;
+import com.tanhua.common.utils.Cache;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +37,11 @@ public class RedisCacheInterceptor implements HandlerInterceptor {
             return true;
         }
         //判断是否为Get请求
-        if (((HandlerMethod) handler).hasMethodAnnotation(GetMapping.class)) {
+        if (!((HandlerMethod) handler).hasMethodAnnotation(GetMapping.class)) {
             return true;
         }
         //判断是否添加了cache注解
-        if (((HandlerMethod) handler).hasMethodAnnotation(Cache.class)) {
+        if (!((HandlerMethod) handler).hasMethodAnnotation(Cache.class)) {
             return true;
         }
 

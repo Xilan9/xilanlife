@@ -1,7 +1,7 @@
 package com.tanhua.sso.controller;
 
-import com.tanhua.sso.service.PicUploadService;
-import com.tanhua.sso.vo.PicUploadResult;
+import com.tanhua.common.service.PicUploadService;
+import com.tanhua.common.vo.PicUploadResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;

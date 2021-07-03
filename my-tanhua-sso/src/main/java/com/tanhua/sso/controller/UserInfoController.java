@@ -1,6 +1,6 @@
 package com.tanhua.sso.controller;
 
-import com.tanhua.sso.pojo.User;
+import com.tanhua.common.pojo.User;
 import com.tanhua.sso.service.UserInfoService;
 import com.tanhua.sso.service.UserService;
 import com.tanhua.sso.vo.ErrorResult;

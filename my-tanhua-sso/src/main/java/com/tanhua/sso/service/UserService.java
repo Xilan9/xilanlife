@@ -2,9 +2,8 @@ package com.tanhua.sso.service;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.tanhua.sso.mapper.UserMapper;
-import com.tanhua.sso.pojo.User;
+import com.tanhua.common.mapper.UserMapper;
+import com.tanhua.common.pojo.User;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -18,10 +17,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.messaging.MessagingException;
 import org.springframework.stereotype.Service;
-import sun.rmi.runtime.Log;
 
 
-import javax.management.QueryEval;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;

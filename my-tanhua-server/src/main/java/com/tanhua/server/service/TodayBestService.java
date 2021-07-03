@@ -2,10 +2,11 @@ package com.tanhua.server.service;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.tanhua.common.pojo.User;
+import com.tanhua.common.pojo.UserInfo;
+import com.tanhua.common.utils.UserThreadLocal;
 import com.tanhua.dubbo.server.pojo.RecommendUser;
 import com.tanhua.dubbo.server.vo.PageInfo;
-import com.tanhua.server.pojo.User;
-import com.tanhua.server.pojo.UserInfo;
 import com.tanhua.server.vo.PageResult;
 import com.tanhua.server.vo.RecommendUserQueryParam;
 import com.tanhua.server.vo.TodayBest;
@@ -34,13 +35,9 @@ public class TodayBestService {
     @Autowired
     private UserInfoService userInfoService;
 
-    public TodayBest queryTodayBast(String token) {
+        public TodayBest queryTodayBast() {
         //通过sso接口检验token是否有效
-        User user = this.userService.queryUserByToken(token);
-        if (user == null) {
-            //token非法或过期
-            return null;
-        }
+        User user = UserThreadLocal.get();
         //查询推荐用户
         TodayBest todayBest = this.recommendUserService.queryTodayBast(user.getId());
         if (todayBest == null) {
@@ -63,13 +60,15 @@ public class TodayBestService {
     }
 
 
-    public PageResult queryRecommendation(String token, RecommendUserQueryParam queryParam) {
+    /**
+     * 查询推荐用户
+     * @param token
+     * @param queryParam
+     * @return
+     */
+    public PageResult queryRecommendation(RecommendUserQueryParam queryParam) {
         //通过sso接口检验token是否有效
-        User user = this.userService.queryUserByToken(token);
-        if (user == null) {
-            //token非法或过期
-            return null;
-        }
+        User user = UserThreadLocal.get();
         PageResult pageResult = new PageResult();
         pageResult.setPage(queryParam.getPage());
         pageResult.setPagesize(queryParam.getPagesize());

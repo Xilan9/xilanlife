@@ -1,24 +1,19 @@
 package com.tanhua.server.interceptor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tanhua.server.utils.Cache;
+import com.tanhua.common.utils.Cache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.core.MethodParameter;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpRequest;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
-import javax.servlet.Servlet;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @ControllerAdvice
