@@ -518,5 +518,39 @@ public class QuanZiApiImpl implements QuanZiApi {
         return this.queryCommentCount(publishId, CommentType.COMMENT);
     }
 
+    @Override
+    public PageInfo<Comment> queryLikeCommentListByUser(Long userId, Integer page, Integer pageSize) {
 
+        return this.queryCommentListByUser(userId,CommentType.LIKE,page,pageSize);
+    }
+
+    @Override
+    public PageInfo<Comment> queryLoveCommentListByUser(Long userId, Integer page, Integer pageSize) {
+        return this.queryCommentListByUser(userId,CommentType.LOVE,page,pageSize);
+    }
+
+    @Override
+    public PageInfo<Comment> queryCommentListByUser(Long userId, Integer page, Integer pageSize) {
+        return this.queryCommentListByUser(userId,CommentType.COMMENT,page,pageSize);
+    }
+
+
+
+
+
+    private PageInfo<Comment> queryCommentListByUser(Long userId, CommentType commentType, Integer page, Integer pageSize) {
+
+        PageRequest pageRequest = PageRequest.of(page - 1, pageSize, Sort.by(Sort.Order.desc("created")));
+
+
+        Query query = Query.query(Criteria.where("publishUserId").is(userId).and("commentType")
+                .is(commentType.getType())).with(pageRequest);
+
+        List<Comment> commentList = this.mongoTemplate.find(query, Comment.class);
+        PageInfo<Comment> pageInfo = new PageInfo<>();
+        pageInfo.setPageNum(page);
+        pageInfo.setPageSize(pageSize);
+        pageInfo.setRecords(commentList);
+        return pageInfo;
+    }
 }

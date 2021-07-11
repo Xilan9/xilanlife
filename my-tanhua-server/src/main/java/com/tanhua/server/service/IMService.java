@@ -3,27 +3,32 @@ package com.tanhua.server.service;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.tanhua.common.pojo.Announcement;
 import com.tanhua.common.pojo.User;
 import com.tanhua.common.pojo.UserInfo;
 import com.tanhua.common.utils.UserThreadLocal;
 import com.tanhua.dubbo.server.api.HuanXinApi;
+import com.tanhua.dubbo.server.api.QuanZiApi;
 import com.tanhua.dubbo.server.api.UsersApi;
+import com.tanhua.dubbo.server.pojo.Comment;
 import com.tanhua.dubbo.server.pojo.HuanXinUser;
 import com.tanhua.dubbo.server.pojo.Users;
 import com.tanhua.dubbo.server.vo.PageInfo;
-import com.tanhua.server.vo.PageResult;
-import com.tanhua.server.vo.UserInfoVo;
-import com.tanhua.server.vo.UsersVo;
+import com.tanhua.server.vo.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,6 +42,13 @@ public class IMService {
 
     @Autowired
     private UserInfoService userInfoService;
+
+    @Reference(version = "1.0.0")
+    private QuanZiApi quanZiApi;
+
+    @Autowired
+    private AnnouncementService announcementService;
+
 
     public UserInfoVo queryUserInfoByUserName(String userName) {
         //查询环信账户
@@ -124,6 +136,81 @@ public class IMService {
         }
 
         pageResult.setItems(contactsList);
+        return pageResult;
+    }
+
+
+    public PageResult queryLikeCommentList(Integer page, Integer pageSize) {
+        User user = UserThreadLocal.get();
+        PageInfo<Comment> pageInfo = this.quanZiApi.queryLikeCommentListByUser(user.getId(), page, pageSize);
+        return this.fillUserCommentList(pageInfo);
+    }
+
+    public PageResult queryLoveCommentList(Integer page, Integer pageSize) {
+        User user = UserThreadLocal.get();
+        PageInfo<Comment> pageInfo = this.quanZiApi.queryLoveCommentListByUser(user.getId(), page, pageSize);
+        return this.fillUserCommentList(pageInfo);
+    }
+
+    public PageResult queryUserCommentList(Integer page, Integer pageSize) {
+        User user = UserThreadLocal.get();
+        PageInfo<Comment> pageInfo = this.quanZiApi.queryCommentListByUser(user.getId(), page, pageSize);
+        return this.fillUserCommentList(pageInfo);
+    }
+
+    private PageResult fillUserCommentList(PageInfo<Comment> pageInfo) {
+        PageResult pageResult = new PageResult();
+        pageInfo.setPageNum(pageInfo.getPageNum());
+        pageInfo.setPageSize(pageInfo.getPageSize());
+        List<Comment> records = pageInfo.getRecords();
+        if (CollUtil.isEmpty(records)) {
+            return pageResult;
+            //没有查询到数据
+        }
+        List<Object> userIdList = CollUtil.getFieldValues(records, "userId");
+        List<UserInfo> userInfoList = this.userInfoService.queryUserInfoByUserIdLsit(userIdList);
+
+        List<MessageCommentVo> messageCommentVoList = new ArrayList<>();
+
+        for (Comment comment : records) {
+            for (UserInfo userInfo : userInfoList) {
+                if (ObjectUtil.equal(comment.getUserId(), userInfo.getUserId())) {
+                    MessageCommentVo messageCommentVo = new MessageCommentVo();
+                    messageCommentVo.setId(comment.getId().toHexString());
+                    messageCommentVo.setAvatar(userInfo.getLogo());
+                    messageCommentVo.setNickname(userInfo.getNickName());
+                    messageCommentVo.setCreateDate(DateUtil.format(new Date(comment.getCreated()), "yyyy-MM-dd HH:mm"));
+
+                    messageCommentVoList.add(messageCommentVo);
+                    break;
+                }
+            }
+        }
+        pageResult.setItems(messageCommentVoList);
+        return pageResult;
+    }
+
+
+    public PageResult queryMessageAnnouncementList(Integer page, Integer pageSize) {
+        IPage<Announcement> announcementPage = this.announcementService.queryList(page, pageSize);
+
+        List<AnnouncementVo> announcementVoList = new ArrayList<>();
+
+        for (Announcement record : announcementPage.getRecords()) {
+            AnnouncementVo announcementVo = new AnnouncementVo();
+            announcementVo.setId(record.getId().toString());
+            announcementVo.setTitle(record.getTitle());
+            announcementVo.setDescription(record.getDescription());
+            announcementVo.setCreateDate(DateUtil.format(record.getCreated(), "yyyy-MM-dd HH:mm"));
+
+            announcementVoList.add(announcementVo);
+        }
+
+        PageResult pageResult = new PageResult();
+        pageResult.setPage(page);
+        pageResult.setPagesize(pageSize);
+        pageResult.setItems(announcementVoList);
+
         return pageResult;
     }
 }

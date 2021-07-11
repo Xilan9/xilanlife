@@ -137,6 +137,27 @@ public interface QuanZiApi {
      */
     Long queryCommentCount(String publishId);
 
+    /**
+     * 查询对我的点赞消息列表
+     *
+     * @return
+     */
+    PageInfo<Comment> queryLikeCommentListByUser(Long userId, Integer page, Integer pageSize);
+
+    /**
+     * 查询对我的喜欢消息列表
+     *
+     * @return
+     */
+    PageInfo<Comment> queryLoveCommentListByUser(Long userId, Integer page, Integer pageSize);
+
+    /**
+     * 查询对我的评论消息列表
+     *
+     * @return
+     */
+    PageInfo<Comment> queryCommentListByUser(Long userId, Integer page, Integer pageSize);
+
 
 
 
