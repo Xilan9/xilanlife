@@ -14,8 +14,17 @@
     <modules>
         <module>my-tanhua-dubbo-interface</module>
         <module>my-tanhua-dubbo-service</module>
+        <module>my-tanhua-dubbo-huanxin</module>
 
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>cn.itcast.tanhua</groupId>
+            <artifactId>my-tanhua-dubbo-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>

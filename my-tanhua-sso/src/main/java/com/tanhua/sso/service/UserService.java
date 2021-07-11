@@ -1,9 +1,11 @@
 package com.tanhua.sso.service;
 
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.tanhua.common.mapper.UserMapper;
 import com.tanhua.common.pojo.User;
+import com.tanhua.dubbo.server.api.HuanXinApi;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -28,12 +30,18 @@ import java.util.concurrent.TimeUnit;
 public class UserService {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+
     @Autowired
     private UserMapper userMapper;
+
     @Value("${jwt.secret}")
     private String secret;
+
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
+
+    @Reference(version = "1.0.0")
+    private HuanXinApi huanXinApi;
 
     /**
      * 用户登录
@@ -68,9 +76,15 @@ public class UserService {
             //注册新用户
             this.userMapper.insert(user);
             isNew = true;
+
+            //将该用户信息注册到环信
+            Boolean register = this.huanXinApi.register(user.getId());
+            if (!register){
+                log.error("注册环信平台失败"+user.getId());
+            }
         }
 
-        Map<String, Object> claims = new HashMap<String, Object>();
+        Map<String, Object> claims = new HashMap                                                                    <String, Object>();
         claims.put("id", user.getId());
         // 生成token
         String token = Jwts.builder()

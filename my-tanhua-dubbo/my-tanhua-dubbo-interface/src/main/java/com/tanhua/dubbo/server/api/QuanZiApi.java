@@ -129,6 +129,19 @@ public interface QuanZiApi {
      * @return
      */
     Boolean saveComment(Long userId, String publishId, String content);
+
+    /**
+     * 查询评论数
+     * @param publishId
+     * @return
+     */
+    Long queryCommentCount(String publishId);
+
+
+
+
+
+
 }
 
 

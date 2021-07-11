@@ -8,10 +8,7 @@ import cn.hutool.core.util.StrUtil;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.tanhua.dubbo.server.enums.CommentType;
 import com.tanhua.dubbo.server.enums.IdType;
-import com.tanhua.dubbo.server.pojo.Album;
-import com.tanhua.dubbo.server.pojo.Comment;
-import com.tanhua.dubbo.server.pojo.Publish;
-import com.tanhua.dubbo.server.pojo.TimeLine;
+import com.tanhua.dubbo.server.pojo.*;
 import com.tanhua.dubbo.server.service.IdService;
 import com.tanhua.dubbo.server.service.TimeLineService;
 import com.tanhua.dubbo.server.vo.PageInfo;
@@ -45,6 +42,9 @@ public class QuanZiApiImpl implements QuanZiApi {
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
+
+    @Autowired
+    private VideoApi videoApi;
 
     //评论数据存储在Redis中key的前缀
     private static final String COMMENT_REDIS_KEY_PREFIX = "QUANZI_COMMENT_";
@@ -314,15 +314,22 @@ public class QuanZiApiImpl implements QuanZiApi {
             comment.setCreated(System.currentTimeMillis());
 
             Publish publish = this.queryPublishById(publishId);
-            if (ObjectUtil.isNotEmpty(publish)){
+            if (ObjectUtil.isNotEmpty(publish)) {
                 comment.setPublishUserId(publish.getUserId());
-            }else {
+            } else {
                 //查询评论
-                Comment myComment =this.queryCommentById(publishId);
-                if(ObjectUtil.isNotEmpty(myComment)){
+                Comment myComment = this.queryCommentById(publishId);
+                if (ObjectUtil.isNotEmpty(myComment)) {
                     comment.setPublishUserId(myComment.getUserId());
-                }else {
-                    //TODO 其他情况，比如小视频啥的
+                } else {
+                    //查询小视频
+                    Video video = this.videoApi.queryVideoById(publishId);
+                    if (ObjectUtil.isNotEmpty(video)) {
+                        comment.setPublishUserId(video.getUserId());
+                    } else {
+                        //其他情况直接返回
+                        return false;
+                    }
                 }
             }
             this.mongoTemplate.save(comment);
@@ -335,11 +342,12 @@ public class QuanZiApiImpl implements QuanZiApi {
 
     /**
      * 根据ID查询comment对象
+     *
      * @param id
      * @return
      */
-    private Comment queryCommentById(String id){
-        return this.mongoTemplate.findById(new ObjectId(id),Comment.class);
+    private Comment queryCommentById(String id) {
+        return this.mongoTemplate.findById(new ObjectId(id), Comment.class);
     }
 
 
@@ -484,7 +492,7 @@ public class QuanZiApiImpl implements QuanZiApi {
         Query query = Query.query(Criteria.where("publishId").is(new ObjectId(publishId))
                 .and("commentType").is(CommentType.COMMENT.getType())).with(pageRequest);
         List<Comment> commentList = this.mongoTemplate.find(query, Comment.class);
-        PageInfo<Comment> pageInfo=new PageInfo<>();
+        PageInfo<Comment> pageInfo = new PageInfo<>();
         pageInfo.setPageSize(pageSize);
         pageInfo.setPageNum(page);
         pageInfo.setRecords(commentList);
@@ -503,5 +511,12 @@ public class QuanZiApiImpl implements QuanZiApi {
     public Boolean saveComment(Long userId, String publishId, String content) {
         return this.saveComment(userId, publishId, CommentType.COMMENT, content);
     }
+
+    @Override
+    public Long queryCommentCount(String publishId) {
+
+        return this.queryCommentCount(publishId, CommentType.COMMENT);
+    }
+
 
 }
