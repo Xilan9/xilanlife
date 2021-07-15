@@ -1,6 +1,7 @@
 package com.tanhua.server.service;
 
 
+import cn.hutool.core.util.ObjectUtil;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.tanhua.dubbo.server.api.RecommendUserApi;
 import com.tanhua.dubbo.server.pojo.RecommendUser;
@@ -39,5 +40,21 @@ public class RecommendUserService {
 
     public PageInfo<RecommendUser> queryRecommendUserList(Long userId, Integer page, Integer pageSize) {
         return this.recommendUserApi.queryPageInfo(userId,page,pageSize);
+    }
+
+    /**
+     * 查询推荐好友的缘分值
+     *
+     * @param userId
+     * @param toUserId
+     * @return
+     */
+    public Double queryScore(Long userId, Long toUserId){
+        Double score = this.recommendUserApi.queryScore(userId, toUserId);
+        if(ObjectUtil.isNotEmpty(score)){
+            return score;
+        }
+        //默认值
+        return 98d;
     }
 }

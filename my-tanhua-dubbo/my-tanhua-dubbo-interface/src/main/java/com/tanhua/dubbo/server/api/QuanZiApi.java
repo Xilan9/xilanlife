@@ -158,6 +158,16 @@ public interface QuanZiApi {
      */
     PageInfo<Comment> queryCommentListByUser(Long userId, Integer page, Integer pageSize);
 
+    /**
+     * 查询相册表
+     *
+     * @param userId
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    PageInfo<Publish> queryAlbumList(Long userId, Integer page, Integer pageSize);
+
 
 
 

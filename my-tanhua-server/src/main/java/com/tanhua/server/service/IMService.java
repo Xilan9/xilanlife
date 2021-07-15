@@ -83,7 +83,7 @@ public class IMService {
         if (StrUtil.isNotEmpty(id)) {
             //注册好友关系到环信
             return this.huanXinApi.addUserFriend(user.getId(), friendId);
-        }
+        }            
 
         return false;
     }

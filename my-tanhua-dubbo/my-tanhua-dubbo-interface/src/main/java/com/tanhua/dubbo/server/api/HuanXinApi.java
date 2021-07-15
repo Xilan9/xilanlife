@@ -1,5 +1,6 @@
 package com.tanhua.dubbo.server.api;
 
+import com.tanhua.dubbo.server.enums.HuanXinMessageType;
 import com.tanhua.dubbo.server.pojo.HuanXinUser;
 
 /**
@@ -61,4 +62,17 @@ public interface HuanXinApi {
      * @return
      */
     Boolean removeUserFriend(Long userId, Long friendId);
+
+
+    /**
+     * 以管理员身份发送消息
+     * 文档地址：http://docs-im.easemob.com/im/server/basics/messages#%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF
+     *
+     * @param targetUserName 发送目标的用户名
+     * @param huanXinMessageType 消息类型
+     * @param msg
+     * @return
+     */
+    Boolean sendMsgFromAdmin(String targetUserName, HuanXinMessageType huanXinMessageType, String msg);
+
 }

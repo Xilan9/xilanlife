@@ -521,21 +521,18 @@ public class QuanZiApiImpl implements QuanZiApi {
     @Override
     public PageInfo<Comment> queryLikeCommentListByUser(Long userId, Integer page, Integer pageSize) {
 
-        return this.queryCommentListByUser(userId,CommentType.LIKE,page,pageSize);
+        return this.queryCommentListByUser(userId, CommentType.LIKE, page, pageSize);
     }
 
     @Override
     public PageInfo<Comment> queryLoveCommentListByUser(Long userId, Integer page, Integer pageSize) {
-        return this.queryCommentListByUser(userId,CommentType.LOVE,page,pageSize);
+        return this.queryCommentListByUser(userId, CommentType.LOVE, page, pageSize);
     }
 
     @Override
     public PageInfo<Comment> queryCommentListByUser(Long userId, Integer page, Integer pageSize) {
-        return this.queryCommentListByUser(userId,CommentType.COMMENT,page,pageSize);
+        return this.queryCommentListByUser(userId, CommentType.COMMENT, page, pageSize);
     }
-
-
-
 
 
     private PageInfo<Comment> queryCommentListByUser(Long userId, CommentType commentType, Integer page, Integer pageSize) {
@@ -551,6 +548,28 @@ public class QuanZiApiImpl implements QuanZiApi {
         pageInfo.setPageNum(page);
         pageInfo.setPageSize(pageSize);
         pageInfo.setRecords(commentList);
+        return pageInfo;
+    }
+
+    @Override
+    public PageInfo<Publish> queryAlbumList(Long userId, Integer page, Integer pageSize) {
+        PageInfo<Publish> pageInfo = new PageInfo<>();
+        pageInfo.setPageNum(page);
+        pageInfo.setPageSize(pageSize);
+        PageRequest pageRequest = PageRequest.of(page - 1, pageSize,
+                Sort.by(Sort.Order.desc("created")));
+        Query query = new Query().with(pageRequest);
+        //查询自己的相册表
+        List<Album> albumList = this.mongoTemplate.find(query, Album.class, "quanzi_album_" + userId);
+        if (CollUtil.isEmpty(albumList)) {
+            return pageInfo;
+        }
+        List<Object> publishId = CollUtil.getFieldValues(albumList, "publishId");
+        Query query1=Query.query(Criteria.where("id").in(publishId))
+                .with(Sort.by(Sort.Order.desc("created")));
+
+        List<Publish> publishList = this.mongoTemplate.find(query1, Publish.class);
+        pageInfo.setRecords(publishList);
         return pageInfo;
     }
 }

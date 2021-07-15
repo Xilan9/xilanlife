@@ -3,9 +3,11 @@ package com.tanhua.dubbo.server.api;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.Method;
+import cn.hutool.json.JSONException;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.tanhua.dubbo.server.enums.HuanXinMessageType;
 import com.tanhua.dubbo.server.service.RequestService;
 import com.tanhua.dubbo.server.service.TokenService;
 import com.tanhua.dubbo.server.config.HuanXinConfig;
@@ -108,4 +110,28 @@ public class HuanXinApiImpl implements HuanXinApi {
         // 添加失败
         return false;
     }
+
+    @Override
+    public Boolean sendMsgFromAdmin(String targetUserName, HuanXinMessageType huanXinMessageType, String msg) {
+        String targetUrl = this.huanXinConfig.getUrl()
+                + this.huanXinConfig.getOrgName() + "/"
+                + this.huanXinConfig.getAppName() + "/messages";
+
+        try {
+            String body = JSONUtil.createObj()
+                    .set("target_type", "users")
+                    .set("target", JSONUtil.createArray().set(targetUserName))
+                    .set("msg", JSONUtil.createObj()
+                            .set("type", huanXinMessageType.getType())
+                            .set("msg", msg)).toString();
+            //表示消息发送者;无此字段Server会默认设置为“from”:“admin”，有from字段但值为空串(“”)时请求失败
+            // .set("from","")
+
+            return this.requestService.execute(targetUrl,body,Method.POST).isOk();
+        } catch (JSONException e) {
+            log.error("发送消息失败");
+        }
+        return false;
+    }
+
 }

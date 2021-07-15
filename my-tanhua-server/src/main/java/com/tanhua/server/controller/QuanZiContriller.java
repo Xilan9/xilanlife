@@ -5,6 +5,7 @@ import cn.hutool.core.util.StrUtil;
 import com.tanhua.server.service.QuanZiService;
 import com.tanhua.server.vo.PageResult;
 import com.tanhua.server.vo.QuanZiVo;
+import com.tanhua.server.vo.VisitorsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Collections;
+import java.util.List;
 
 @RestController
 @RequestMapping("movements")
@@ -166,13 +168,41 @@ public class QuanZiContriller {
     }
 
     /**
-     * TODO：谁看过我
+     * 谁看过我
      *
      * @return
      */
     @GetMapping("visitors")
-    public ResponseEntity<Object> queryVisitors() {
-        return ResponseEntity.ok(Collections.EMPTY_LIST);
+    public ResponseEntity<List<VisitorsVo>> queryVisitorsList(){
+        try {
+            List<VisitorsVo> list = this.quanZiService.queryVisitorsList();
+            return ResponseEntity.ok(list);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
+
+    /**
+     * 自己的所有动态
+     *
+     * @return
+     */
+    @GetMapping("all")
+    public ResponseEntity<PageResult> queryAlbumList(@RequestParam(value = "page", defaultValue = "1") Integer page,
+                                                     @RequestParam(value = "pagesize", defaultValue = "10") Integer pageSize,
+                                                     @RequestParam(value = "userId") Long userId) {
+        try {
+            PageResult pageResult = this.quanZiService.queryAlbumList(userId, page, pageSize);
+            return ResponseEntity.ok(pageResult);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
+
+
+
+
 }
 
