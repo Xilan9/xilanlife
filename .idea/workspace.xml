@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd5e3d1c-e356-477d-ad07-a5a2c4f85a8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/mytanhuasso/target/" />
+    <ignored path="$PROJECT_DIR$/itcast-tanhua-sso/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-sso/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-server/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-dubbo/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-common/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/target/" />
+    <ignored path="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/src/main/java/com/tanhua/dubbo/es/ESApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/UserLocationApi.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/UserLocationApiImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/test/java/com/tanhua/server/TestIMService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.2.RELEASE/spring-test-5.1.2.RELEASE.jar!/org/springframework/test/context/junit4/SpringRunner.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/pojo/UserLocation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/vo/UserLocationVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>map</find>
+      <find>user_</find>
+      <find />
+      <find>`</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/service/UserService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-sso/pom.xml" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/HuanXinUserVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/HuanXinController.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/UserInfoVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/imController/IMController.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/ImService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/test/java/com/tanhua/server/TestIMService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/test/java/com/tanhua/dubbo/server/TestHuanXinApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/UsersApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/UsersApiImpl.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/UsersVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/mapper/MyCenterMapper.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/service/MyCenterService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/controller/MyCenterController.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/HuanXinService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/MessageCommentVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/MyApplication.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/pojo/Announcement.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/mapper/AnnouncementMapper.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/AnnouncementService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/AnnouncementVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/IMController.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/IMService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/RecommendUserApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/RecommendUserApiImpl.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/RecommendUserService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/QuanZiApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/QuanZiApiImpl.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/pojo/Question.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/mapper/QuestionMapper.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/QuestionService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/enums/HuanXinMessageType.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/HuanXinApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/api/HuanXinApiImpl.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/TanHuaController.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/pojo/Visitors.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/VisitorsApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/service/VisitorsApiImpl.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/VisitorsVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/QuanZiContriller.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/QuanZiService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/TanHuaService.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/pom.xml" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/src/main/java/com/tanhua/dubbo/es/ESApplication.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/pojo/UserLocation.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/vo/UserLocationVo.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/UserLocationApi.java" />
+        <option value="$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/UserLocationApiImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/Develop/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="F:\Develop\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="my-tanhua-dubbo-es" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="my-tanhua-dubbo-es" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="270" />
+    <option name="y" value="205" />
+    <option name="width" value="1390" />
+    <option name="height" value="795" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tanhua" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mytanhua" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mytanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="my-tanhua-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tanhua" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15730338" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.tanhua.sso.service" />
+      <recent name="com.tanhua.sso" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tanhua.dubbo.server.api" />
+      <recent name="com.tanhua.common.vo" />
+      <recent name="com.tanhua.common.config" />
+      <recent name="com.tanhua.common.service" />
+      <recent name="com.tanhua.dubbo.server.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\tanhua\mytanhua\my-tanhua-server\src\main\java\com\tanhua\server\controller" />
+      <recent name="F:\tanhua\mytanhua\my-tanhua-dubbo\my-tanhua-dubbo-huanxin\src\main\java\com\tanhua\dubbo" />
+      <recent name="F:\tanhua\mytanhua\my-tanhua-dubbo\my-tanhua-dubbo-huanxin\src\main\java\com\tanhua\dubbo\server" />
+      <recent name="F:\tanhua\mytanhua\my-tanhua-dubbo\my-tanhua-dubbo-huanxin" />
+      <recent name="F:\tanhua\mytanhua\my-tanhua-dubbo\my-tanhua-dubbo-interface\src\main\java\com\tanhua\dubbo\server\pojo" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
+    <configuration name="TestIMService.testUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mytanhuaserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tanhua.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tanhua.server" />
+      <option name="MAIN_CLASS_NAME" value="com.tanhua.server.TestIMService" />
+      <option name="METHOD_NAME" value="testUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DubboApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mytanhuadubboservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tanhua.dubbo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tanhua.dubbo.server.DubboApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HuanXinDubboApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="my-tanhua-dubbo-huanxin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tanhua.dubbo.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tanhua.dubbo.server.HuanXinDubboApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="my-tanhua-sso" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tanhua.sso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tanhua.sso.MyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mytanhuaserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tanhua.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tanhua.server.ServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ServerApplication" />
+        <item itemvalue="Spring Boot.HuanXinDubboApplication" />
+        <item itemvalue="Spring Boot.DubboApplication" />
+        <item itemvalue="Spring Boot.MyApplication" />
+        <item itemvalue="JUnit.TestIMService.testUsers" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd5e3d1c-e356-477d-ad07-a5a2c4f85a8c" name="Default Changelist" comment="" />
+      <created>1624518825676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624518825676</updated>
+      <workItem from="1624518827509" duration="2224000" />
+      <workItem from="1624522856936" duration="2809000" />
+      <workItem from="1624581602083" duration="13493000" />
+      <workItem from="1624666886682" duration="13819000" />
+      <workItem from="1624835090279" duration="12902000" />
+      <workItem from="1624879227619" duration="4843000" />
+      <workItem from="1624929853208" duration="7355000" />
+      <workItem from="1625020332446" duration="19979000" />
+      <workItem from="1625099447635" duration="3546000" />
+      <workItem from="1625140637988" duration="3344000" />
+      <workItem from="1625187813628" duration="15172000" />
+      <workItem from="1625288235149" duration="17711000" />
+      <workItem from="1625307316924" duration="5094000" />
+      <workItem from="1625359830587" duration="4200000" />
+      <workItem from="1625446547913" duration="10522000" />
+      <workItem from="1625538718965" duration="10434000" />
+      <workItem from="1625618424056" duration="12968000" />
+      <workItem from="1625704329741" duration="15318000" />
+      <workItem from="1625743791599" duration="2655000" />
+      <workItem from="1625904937573" duration="4771000" />
+      <workItem from="1625966083652" duration="8083000" />
+      <workItem from="1625989008199" duration="5002000" />
+      <workItem from="1626057628498" duration="2384000" />
+      <workItem from="1626158823029" duration="4827000" />
+      <workItem from="1626228255666" duration="15086000" />
+      <workItem from="1626258977486" duration="4280000" />
+      <workItem from="1626312271065" duration="922000" />
+      <workItem from="1626512811672" duration="893000" />
+      <workItem from="1626830820418" duration="49000" />
+      <workItem from="1630557829066" duration="1363000" />
+    </task>
+    <task id="LOCAL-00001" summary="探花交友第三天">
+      <created>1624879290327</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624879290327</updated>
+    </task>
+    <task id="LOCAL-00002" summary="探花交友:实现今日佳人以及实现列表功能">
+      <created>1625049672801</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625049672801</updated>
+    </task>
+    <task id="LOCAL-00003" summary="探花交友:实现圈子以及点赞.评论.喜欢功能">
+      <created>1625312405586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625312405586</updated>
+    </task>
+    <task id="LOCAL-00004" summary="探花交友:实现环信">
+      <created>1625986961940</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625986961941</updated>
+    </task>
+    <task id="LOCAL-00005" summary="探花交友:第七天实现公告列表">
+      <created>1626010111868</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626010111868</updated>
+    </task>
+    <task id="LOCAL-00006" summary="探花交友:第七天已全部完成">
+      <created>1626312597179</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626312597179</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 33m 14s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 39m 19s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 43m 53s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 48m 19s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 56m 59s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 57m 42s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 58m 19s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 19h 59m 10s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 20h 00m 38s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestIMService_testUsers - 2021.07.08 at 20h 03m 00s.xml">
+      <configuration name="TestIMService.testUsers" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="226048000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23726542" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.3838527" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.7832861" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.49433428" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32719547" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="探花交友第三天" />
+    <MESSAGE value="探花交友:实现今日佳人以及实现列表功能" />
+    <MESSAGE value="探花交友:实现圈子以及点赞.评论.喜欢功能" />
+    <MESSAGE value="探花交友:实现环信" />
+    <MESSAGE value="探花交友:第七天实现公告列表" />
+    <MESSAGE value="探花交友:第七天已全部完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="探花交友:第七天已全部完成" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/service/RequestService.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/service/TokenService.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/api/HuanXinApiImpl.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/controller/MyCenterController.java" />
+    <entry file="file://$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="13" selection-start-line="13" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/MessageCommentVo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-sso/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/service/RequestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1238">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/exception/UnauthorizedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/IMController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4309">
+          <caret line="151" column="65" selection-start-line="151" selection-start-column="65" selection-end-line="151" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-sso/src/main/java/com/tanhua/sso/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/DubboApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/pojo/Announcement.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/AnnouncementService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/AnnouncementVo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/IMService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/mapper/AnnouncementMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/HuanXinController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/RecommendUserApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/RecommendUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/HuanXinService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-569">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/HuanXinDubboApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/QuanZiApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="168" column="22" selection-start-line="168" selection-start-column="22" selection-end-line="168" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/pojo/Album.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/QuanZiApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="572" column="24" lean-forward="true" selection-start-line="572" selection-start-column="24" selection-end-line="572" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/pojo/Question.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-common/src/main/java/com/tanhua/common/mapper/QuestionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/QuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/RecommendUserApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/ServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="15" column="61" lean-forward="true" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/pojo/Visitors.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/VisitorsApi.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/HuanXinApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/enums/HuanXinMessageType.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/resources/huanxin.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/service/VisitorsApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/vo/VisitorsVo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/QuanZiContriller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="194" column="13" selection-start-line="194" selection-start-column="13" selection-end-line="194" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/QuanZiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="329" column="85" selection-start-line="329" selection-start-column="85" selection-end-line="329" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/controller/TanHuaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java/com/tanhua/dubbo/server/api/HuanXinApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/main/java/com/tanhua/server/service/TanHuaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="58" column="65" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/2.1.2.RELEASE/spring-data-mongodb-2.1.2.RELEASE.jar!/org/springframework/data/mongodb/core/mapping/Document.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/src/main/java/com/tanhua/dubbo/es/ESApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/api/UserLocationApi.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/pojo/UserLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java/com/tanhua/dubbo/server/vo/UserLocationVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java/com/tanhua/dubbo/server/api/UserLocationApiImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.1.2.RELEASE/spring-test-5.1.2.RELEASE.jar!/org/springframework/test/context/junit4/SpringRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-tanhua-server/src/test/java/com/tanhua/server/TestIMService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>mytanhua</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
