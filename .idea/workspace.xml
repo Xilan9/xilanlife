@@ -183,7 +183,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="F:/Develop/apache-maven-3.6.1" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Develop/apache-maven-3.6.1" />
         <option name="userSettingsFile" value="F:\Develop\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -363,6 +363,17 @@
       <option name="MAIN_CLASS_NAME" value="com.tanhua.server.TestIMService" />
       <option name="METHOD_NAME" value="testUsers" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

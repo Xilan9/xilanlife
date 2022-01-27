@@ -3,12 +3,23 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-dubbo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-es/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-huanxin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/my-tanhua-dubbo-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-dubbo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/my-tanhua-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/my-tanhua-sso/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
